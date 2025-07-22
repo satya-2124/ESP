@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f9d58, #1e88e5);
+  color: white;
+  text-align: center;
+}
+.hero {
+  margin-top: 10%;
+}
+button {
+  padding: 10px 30px;
+  background: white;
+  border: none;
+  color: #0f9d58;
+  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Salary Prediction</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="hero">
+    <h1>EMPLOYEE SALARY PREDICTION</h1>
+    <p>Powered by AI & Machine Learning</p>
+    <button onclick="window.open('https://share.streamlit.io')">Try Now</button>
+  </div>
+
+  <!-- Link chatbot -->
+  <link rel="stylesheet" href="chatbot/chatbot.css">
+  <script src="chatbot/chatbot.js"></script>
+  <div id="chatbot-root"></div>
+  <script>
+    fetch("chatbot/chatbot.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("chatbot-root").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
