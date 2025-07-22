@@ -1,0 +1,31 @@
+# train_model.py
+
+import pickle
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Sample training data
+# Format: [experience, test_score, interview_score]
+X = np.array([
+    [1, 80, 8],
+    [3, 70, 7],
+    [5, 60, 6],
+    [7, 90, 9],
+    [9, 85, 8],
+    [11, 75, 7],
+    [13, 95, 9],
+    [15, 50, 5]
+])
+
+# Corresponding salaries
+y = np.array([40000, 60000, 80000, 110000, 120000, 130000, 150000, 140000])
+
+# Create and train the model
+model = LinearRegression()
+model.fit(X, y)
+
+# Save the model as salary_model.pkl
+with open('salary_model.pkl', 'wb') as f:
+    pickle.dump(model, f)
+
+print("✅ Model trained and saved as salary_model.pkl")
